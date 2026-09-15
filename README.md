@@ -1,1 +1,0 @@
-# saral-chatbot-take-home
