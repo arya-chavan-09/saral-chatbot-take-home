@@ -84,7 +84,7 @@ class SaralGenerator:
             user_prompt,
         )
 
-        claims = split_into_claims(text)
+        claims = split_into_claims(text[0]['text'])
         coverage = citation_coverage(claims)
 
         if coverage < 1.0:

@@ -5,4 +5,5 @@ langchain-ollama
 chromadb
 rouge-score
 scikit-learn
-langchain_huggingface
+langchain-google-genai
+python-dotenv

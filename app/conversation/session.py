@@ -54,8 +54,8 @@ class SaralSession:
             result=new_result,
             reason=reason,
             diff=compute_diff(
-                self.current.text,
-                new_result.text,
+                self.current.text[0]['text'],  #Changed for gemini
+                new_result.text[0]['text'],  #Changed for gemini
             ),
         )
 

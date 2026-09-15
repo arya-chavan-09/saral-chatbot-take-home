@@ -166,6 +166,9 @@ def build_edit_prompt(
 ):
     context = render_chunks(chunks)
 
+    #Changed for Gemini
+    previous_output = previous_output[0]['text']
+
     system_prompt = f"""
 You are SARAL editing an existing research communication.
 

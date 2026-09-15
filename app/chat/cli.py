@@ -27,7 +27,9 @@ def retrieve_chunks(query: str, source_file: str | None = None, k: int = 6,):
 
 def get_provenance(turn):
     lookup = {doc.metadata["chunk_id"]: doc for doc in turn.result.chunks_used}
-    claims = split_into_claims(turn.result.text)
+    # claims = split_into_claims(turn.result.text)
+    #For gemini changed the line
+    claims = split_into_claims(turn.result.text[0]['text'])
     provenance = build_provenance(claims,lookup)
     coverage = citation_coverage(claims)
 
@@ -38,7 +40,9 @@ def print_turn(turn, show_diff=True):
     print(f"USER: {turn.user_message}")
     print("-" * 70)
 
-    print(turn.result.text)
+    #print(turn.result.text)
+    #Changed for Gemini
+    print(turn.result.text[0]['text'])
 
     if turn.reason:
         print(f"\nReason: {turn.reason}")

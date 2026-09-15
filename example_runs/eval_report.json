@@ -3,21 +3,21 @@
     "source_file": "1412.6980v9.pdf",
     "query": "Adam optimizer bias correction and update rule",
     "citation_coverage": 1.0,
-    "factuality_proxy": 0.4086096501201107,
+    "factuality_proxy": 0.374961998179612,
     "unsupported_claim_fraction": 0.0,
-    "rouge1_f": 0.19004524886877827,
-    "rouge2_f": 0.0273972602739726,
-    "rougeL_f": 0.1085972850678733
+    "rouge1_f": 0.17061611374407581,
+    "rouge2_f": 0.019138755980861243,
+    "rougeL_f": 0.0947867298578199
   },
   {
     "source_file": "buolamwini18a.pdf",
     "query": "accuracy disparities darker females gender classification",
-    "citation_coverage": 1.0,
-    "factuality_proxy": 0.33070541461638225,
-    "unsupported_claim_fraction": 0.0,
-    "rouge1_f": 0.25120772946859904,
-    "rouge2_f": 0.10731707317073172,
-    "rougeL_f": 0.17391304347826086
+    "citation_coverage": 0.8,
+    "factuality_proxy": 0.31094002440333124,
+    "unsupported_claim_fraction": 0.2,
+    "rouge1_f": 0.29,
+    "rouge2_f": 0.13131313131313133,
+    "rougeL_f": 0.21
   },
   {
     "source_file": "1607_06450v1.pdf",
@@ -25,8 +25,8 @@
     "citation_coverage": 1.0,
     "factuality_proxy": 0.0,
     "unsupported_claim_fraction": 1.0,
-    "rouge1_f": 0.22413793103448276,
-    "rouge2_f": 0.06956521739130433,
-    "rougeL_f": 0.11206896551724138
+    "rouge1_f": 0.3333333333333333,
+    "rouge2_f": 0.14130434782608697,
+    "rougeL_f": 0.24731182795698925
   }
 ]

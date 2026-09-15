@@ -15,12 +15,15 @@ Usage:
 import argparse
 import sys
 
-from app.ingestion.seed_documents import load_all_seed_documents
+from app.ingestion.seed_documents import load_all_documents
 from app.vector_store.chroma_store import seed_vector_store
 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def cmd_seed(args):
-    documents = load_all_seed_documents()
+    documents = load_all_documents()
     seed_vector_store(documents, reset=args.reset)
 
 

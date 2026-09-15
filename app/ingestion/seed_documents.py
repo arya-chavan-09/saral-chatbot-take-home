@@ -16,7 +16,7 @@ def get_paper_title(source_file):
 
     return os.path.splitext(source_file)[0].replace("_", " ").title()
 
-def load_chunks(path)
+def load_chunks(path):
     chunks = []
 
     with open(path, "r", encoding="utf-8") as file:

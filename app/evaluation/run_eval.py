@@ -74,17 +74,16 @@ def run_eval():
             topic=case["query"],
         )
         result = generator.generate(chunks, request)
-
         chunk_lookup = {d.metadata["chunk_id"]: d for d in result.chunks_used}
         eval_result = evaluate_generation(
-            result.text, chunk_lookup, reference_text=case["reference_text"]
+            result.text[0]["text"], chunk_lookup, reference_text=case["reference_text"]
         )
 
         print(f"\n{'=' * 70}")
         print(f"Paper: {case['source_file']}")
         print(f"Query: {case['query']}")
         print(f"{'-' * 70}")
-        print(result.text[:400] + ("..." if len(result.text) > 400 else ""))
+        print(result.text[0]["text"][:400] + ("..." if len(result.text) > 400 else ""))
         print(f"{'-' * 70}")
         print(format_eval_report(eval_result))
 
