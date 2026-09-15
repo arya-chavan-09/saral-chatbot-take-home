@@ -7,36 +7,46 @@ This project is a Retrieval Augmented Generation (RAG) chatbot that answers ques
 ## Features
 
 * PDF document ingestion
-* Intelligent text chunking
-* Vector search using ChromaDB
-* Conversational question answering
+* Intelligent section-aware text chunking
+* Dense semantic retrieval using MXBAI-Embed-Large embeddings
+* ChromaDB vector database
+* Audience-adaptive script generation
+* Slide bullet generation
+* Speaker notes and presentation scripts
+* Provenance and citation tracking
+* Conversational refinement and iterative editing
 * Session-based chat history
 * Automated evaluation pipeline
 * Human evaluation template
-* Modular architecture
+* Modular RAG architecture
+* Gemini 3.6 Flash generation support
+
+---
 
 ## Architecture
 
 ```text
 PDF Documents
       ↓
- PDF Parser
+PDF Parser
       ↓
- Section Detection
+Section Detection
       ↓
- Text Chunking
+Math-Aware Text Chunking
       ↓
- Embedding Generation
+MXBAI Embeddings
       ↓
- ChromaDB Vector Store
+ChromaDB Vector Store
       ↓
- Retriever
+Retriever
       ↓
- Prompt Builder
+Prompt Builder
       ↓
- LLM Generator
+Gemini 3.6 Flash
       ↓
- Final Response
+Scripts / Bullets / Speaker Notes
+      ↓
+Provenance & Citations
 ```
 
 ## Installation
@@ -52,6 +62,23 @@ source .venv/bin/activate
 # .venv\Scripts\activate
 
 pip install -r requirements.txt
+
+---
+
+## Gemini Setup (Optional)
+
+### Create API Key
+
+Generate an API key from Google AI Studio:
+
+https://aistudio.google.com/app/apikey
+
+### Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+GOOGLE_API_KEY=your_api_key_here
 ```
 
 ## Run PDF Ingestion
