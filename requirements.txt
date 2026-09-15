@@ -1,0 +1,8 @@
+pdfplumber
+langchain-core
+langchain-chroma
+langchain-ollama
+chromadb
+rouge-score
+scikit-learn
+langchain_huggingface
